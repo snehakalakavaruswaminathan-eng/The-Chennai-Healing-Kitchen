@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chennai Healing Kitchen | 15-Day Vitality Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 800: '#064e3b', 900: '#022c22' },
+                        amber: { 500: '#f59e0b', 600: '#d97706' },
+                        stone: { 50: '#fafaf9', 200: '#e7e5e4', 800: '#292524' }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .gradient-text { background: linear-gradient(135deg, #064e3b, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-emerald-200">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200 p-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-emerald-900">The Chennai Healing Kitchen</h1>
+            <nav class="hidden md:flex gap-6 text-sm font-semibold uppercase tracking-widest text-emerald-800">
+                <a href="#plan" class="hover:text-amber-600 transition">Meal Plan</a>
+                <a href="#about" class="hover:text-amber-600 transition">Healing Philosophy</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 text-center">
+        <h2 class="text-5xl md:text-7xl font-serif text-emerald-900 mb-6">15 Days to Vitality</h2>
+        <p class="max-w-2xl mx-auto text-lg text-stone-600 mb-8 leading-relaxed">A premium, locally-inspired journey designed for weight management and heart health. Rediscover the power of traditional South Indian superfoods.</p>
+        <div class="flex justify-center gap-4">
+            <span class="px-4 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold">Weight Loss Friendly</span>
+            <span class="px-4 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-semibold">Cholesterol Conscious</span>
+        </div>
+    </section>
+
+    <!-- Navigation Scroll -->
+    <div class="sticky top-[89px] z-40 bg-white/80 backdrop-blur py-4 shadow-sm overflow-x-auto whitespace-nowrap px-6 text-center">
+        <div class="inline-flex gap-2" id="day-nav">
+            <!-- JS will populate these buttons -->
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto p-6 py-12" id="plan">
+        <div id="meal-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamic Content -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <section id="about" class="bg-emerald-900 text-stone-50 py-20 px-6 mt-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-4xl font-serif text-amber-500 mb-8">Healing with Food</h3>
+            <p class="text-lg leading-relaxed text-emerald-100">Our program focuses on seasonal, nutrient-dense ingredients native to Chennai. By replacing refined grains with traditional millets like Ragi, Samai, and Varagu, we stabilize insulin levels and support cardiovascular health. This isn't a diet; it's a return to ancestral wisdom for modern longevity.</p>
+        </div>
+    </section>
+
+    <script>
+        const planData = [
+            { day: 1, b: "Samai Ven Pongal", l: "Varagu rice with Drumstick/Brinjal Sambar", s: "Roasted Makhana", d: "Moong Dal Chilla with paneer" },
+            { day: 2, b: "Ragi Idli", l: "Kuthiraivali Curd Rice with Kovakkai fry", s: "Sprouted Moong salad", d: "Bajra Rotis with mixed vegetable Saag" },
+            { day: 3, b: "Thinai Upma", l: "Brown Rice with Ridge Gourd Kootu", s: "Almonds and walnuts", d: "Mediterranean Buddha Bowl" },
+            { day: 4, b: "Pesarattu", l: "Samai Bisi Bele Bath", s: "Steamed corn", d: "Oats and Vegetable Khichdi" },
+            { day: 5, b: "Varagu Poha", l: "Ragi Kali with Drumstick/Keerai Kuzhambu", s: "Papaya/Watermelon", d: "Paneer and Bell Pepper Jalfrezi" },
+            { day: 6, b: "Multigrain Adai with Avial", l: "Thinai Lemon Rice with Snake Gourd", s: "Sundal", d: "Clear Vegetable Soup and roasted salad" },
+            { day: 7, b: "Kambu Koozh", l: "Varagu Vegetable Biryani", s: "Apple and peanuts", d: "Samai Curd Rice with Bitter Gourd" },
+            { day: 8, b: "Ragi Semiya Upma", l: "Red Rice with Murungai Keerai Sambar and Yam roast", s: "Tender coconut water", d: "Grilled Vegetable Platter with paneer" },
+            { day: 9, b: "Oats and Ragi Malt", l: "Kuthiraivali Rice with Bottle Gourd More Kuzhambu", s: "Boiled sweet potato", d: "Millet-based Tabbouleh" },
+            { day: 10, b: "Brown Rice Idlis with Veg Stew", l: "Bajra Khichdi with Kadhi", s: "Orange/grapes", d: "Whole wheat Pasta with tomato-basil sauce" },
+            { day: 11, b: "Thinai Pongal", l: "Varagu Rice with Veg Poriyal and Green Gram Sundal", s: "Sunflower/pumpkin seeds", d: "Ragi Roti with Moong Dal Tadka" },
+            { day: 12, b: "Samai Idiyappam with veg Kurma", l: "Brown Rice with Keerai Molagootal and Arbi", s: "Pomegranate and kiwi", d: "Mexican Millet Bowl" },
+            { day: 13, b: "Kambu Dosa", l: "Kuthiraivali Curd Rice with Brinjal Thokku", s: "Makhana", d: "Paneer Tikka with green salad" },
+            { day: 14, b: "Ragi and Banana Pancakes", l: "Samai Rice with Radish Sambar and Chow-Chow Kootu", s: "Steamed peanuts", d: "Minestrone Soup" },
+            { day: 15, b: "Varagu Masala Dosa", l: "Thinai Puliogare with Chana", s: "Buttermilk", d: "Mixed Millet Crêpes with spinach and corn" }
+        ];
+
+        const container = document.getElementById('meal-container');
+        const nav = document.getElementById('day-nav');
+
+        planData.forEach((item, index) => {
+            // Populate Nav
+            const btn = document.createElement('a');
+            btn.className = "px-4 py-2 bg-emerald-800 text-white rounded-lg hover:bg-amber-600 transition text-sm font-medium";
+            btn.innerText = `Day ${item.day}`;
+            btn.href = `#day-${item.day}`;
+            nav.appendChild(btn);
+
+            // Populate Cards
+            const div = document.createElement('div');
+            div.id = `day-${item.day}`;
+            div.className = "bg-white p-8 rounded-2xl shadow-xl border border-stone-100 hover:border-emerald-200 transition-all duration-300";
+            div.innerHTML = `
+                <h3 class="text-2xl font-serif text-emerald-900 mb-6 border-b border-emerald-100 pb-2">Day ${item.day}</h3>
+                <div class="space-y-4">
+                    <div class="group"><p class="text-xs uppercase font-bold text-amber-600 tracking-wider">Breakfast</p><p class="text-stone-800 font-semibold">${item.b}</p></div>
+                    <div class="group"><p class="text-xs uppercase font-bold text-amber-600 tracking-wider">Lunch</p><p class="text-stone-800 font-semibold">${item.l}</p></div>
+                    <div class="group"><p class="text-xs uppercase font-bold text-amber-600 tracking-wider">Snack</p><p class="text-stone-800 font-semibold">${item.s}</p></div>
+                    <div class="group"><p class="text-xs uppercase font-bold text-amber-600 tracking-wider">Dinner</p><p class="text-stone-800 font-semibold">${item.d}</p></div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
